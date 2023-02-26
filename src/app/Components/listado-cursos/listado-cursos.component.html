@@ -1,0 +1,21 @@
+<div class="container mt-5 bg-warning p-4">
+  <div class="cajaboton">
+    <button class="btn btn-danger boton" [routerLink]="['/categorias']">ATRAS</button>
+  </div>
+  <div class="container d-flex flex-wrap gap-2">
+    <div class="card p-3" style="width: 18rem;" *ngFor="let curso of listadoCursos">
+      <img [src]="curso.img_url" class="img card-img-top" [alt]="curso.nombre">
+      <div class="card-body">
+        <h5 class="card-title">{{curso.nombre}}</h5>
+        <p class="card-text">{{curso.descripcion}}
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{curso.horarios}}</li>
+        <li class="list-group-item">{{curso.precios}} <b>€</b></li>
+      </ul>
+      <button [routerLink]="['/cursos/detalle/', curso.id]" class="btn btn-success">Detalles</button>
+    </div>
+
+  </div>
+</div>
