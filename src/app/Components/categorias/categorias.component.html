@@ -1,21 +1,21 @@
-<div class="pb-5 container bg-warning d-flex flex-column mt-5">
-  <div class="container">
-    <div class="cajasuperior container">
-      <div class="textos d-flex flex-column align-items-center">
-        <h5 class="h5 mt-5 p-4 titulo">Empieza tu segunda vida</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil qui suscipit veritatis porro.
-          Molestias
-          aspernatur eum quas. Tenetur, esse?</p>
+<div class="pb-5 container d-flex flex-column mt-2 bg-warning p-4">
+  <img class="main" src="../../../assets/imgs/lake-g6c4ac36f6_1280.jpg" alt="">
+  <div class="cajasuperior container">
+    <div class="textos d-flex flex-column align-items-center">
+      <h5 class="h5 mt-2 titulo">Empieza tu segunda vida</h5>
+      <h6>Piensa en todas las cosas que todavia puedes aprender</h6>
+      <p> Conviertete con Sprencia en lo que quieras. Tenemos los cursos mas completos
+        y prácticos de toda España, garántia de éxito!escritor, pintor, agricultor,</p>
 
-      </div>
     </div>
   </div>
+
   <div class="container d-flex flex-wrap gap-2">
-    <div class="card mt-4" style="width: 18rem;" *ngFor="let categoria of categorias">
+    <div class="cardd card" style="width: 15rem;" *ngFor="let categoria of categorias">
       <img [src]="categoria.img" style="height: 12rem;" class="cardimg card-img-top" alt="{{categoria.nombre}}">
       <div class="card-body">
-        <h5 class="card-title">{{categoria.nombre}}</h5>
-        <p class="card-text">{{categoria.descripcion}}
+        <h6 class="card-title">{{categoria.nombre}}</h6>
+        <p class="card-txt card-text">{{categoria.descripcion}}
         </p>
         <a class="btn btn-primary" [routerLink]="['/categorias/' , categoria.id]">Ver Cursos</a>
       </div>

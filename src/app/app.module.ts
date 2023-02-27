@@ -12,7 +12,6 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { WorkwithusComponent } from './Components/workwithus/workwithus.component';
 import { ListadoCursosComponent } from './Components/listado-cursos/listado-cursos.component';
-import { DetallaCursoComponent } from './Componentes/detalla-curso/detalla-curso.component';
 import { DetalleCursoComponent } from './Components/detalle-curso/detalle-curso.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { DetalleCursoComponent } from './Components/detalle-curso/detalle-curso.
     RegisterComponent,
     WorkwithusComponent,
     ListadoCursosComponent,
-    DetallaCursoComponent,
     DetalleCursoComponent,
    
   ],
