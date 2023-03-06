@@ -7,17 +7,28 @@ import { RegisterComponent } from './Components/register/register.component';
 import { WorkwithusComponent } from './Components/workwithus/workwithus.component';
 import { ListadoCursosComponent } from './Components/listado-cursos/listado-cursos.component';
 import { DetalleCursoComponent } from './Components/detalle-curso/detalle-curso.component';
+import { OpinionesComponent } from './Components/opiniones/opiniones.component';
+import { HomeComponent } from './Components/home/home.component';
+import { LoginGuard } from './guards/login.guard';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { EditarComponent } from './Components/editar/editar.component';
+import { AllopinionsComponent } from './Components/allopinions/allopinions.component';
 
 
 const routes: Routes = [
-   {path: '', pathMatch: 'full', redirectTo: 'categorias'},
+   {path: '', pathMatch: 'full', redirectTo: 'home'},
+   {path: 'home', component: HomeComponent},
    {path: 'categorias', component: CategoriasComponent},
-   {path: 'categorias/:id', component: ListadoCursosComponent },
-   {path: 'cursos/detalle/:id', component: DetalleCursoComponent },
+   {path: 'cursos/categoria/:id', component: ListadoCursosComponent },
+   {path: 'cursos/curso/:id', component: DetalleCursoComponent , children: [
+    {path: 'opiniones', component: OpinionesComponent}]},
    {path: 'empresas', component: EmpresasComponent},
    {path: 'login', component: LoginComponent},
    {path: 'register', component: RegisterComponent},
+   {path: 'dashboard', component: DashboardComponent, canActivate: [LoginGuard]},
+   {path: 'editar', component: EditarComponent,  canActivate: [LoginGuard]},
    {path: 'workwithus', component: WorkwithusComponent},
+   {path: 'allopinions', component: AllopinionsComponent}
 ];
 
 @NgModule({

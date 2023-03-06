@@ -1,19 +1,27 @@
-<div class="container mt-5 bg-info p-4">
-  <form class="">
+<div class="login container mt-5 p-4">
+  <form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
     <h2>Login</h2>
     <div class="mb-3 ">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        formControlName="email">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
     </div>
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
+
+    <!-- <p class="mt-1 text-danger fw-bold">User o contraseña Incorrectos</p> -->
+
     <button type="submit" class="btn btn-primary">Submit</button>
+    <a class="text-warning mx-4" [routerLink]="['/register']">No tienes cuenta? Registrate Aqui!</a>
+    <div *ngIf="alerta" class="mt-5 alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>OOoops...</strong> Usuario o contraseña incorrectos
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
   </form>
 </div>

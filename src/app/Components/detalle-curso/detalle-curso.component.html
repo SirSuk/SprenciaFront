@@ -1,1 +1,27 @@
-<p>detalle-curso works!</p>
+<div class="container d-flex gap-5 justify-content-center">
+
+  <div class="card text-center" style="width: 36rem;" *ngFor="let data of detalleCurso">
+    <button class="btn btn-danger boton" [routerLink]="['/cursos/categoria/', data.categoria_id]">ATRAS</button>
+
+    <div class="cajaboton">
+    </div>
+    <img [src]="data.img_url" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title fw-bold">{{data.nombre}}</h5>
+      <p class="card-text">{{data.descripcion}} </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><span class="fw-bold">Dias a la semana: </span>{{data.dias_semana}}</li>
+      <li class="list-group-item"><span class="fw-bold">Horarios: </span> {{data.horarios}}<span class="fw-bold">
+          Formato:</span> {{data.formato}}</li>
+      <li class="list-group-item"><span class="fw-bold">Profesor: </span> {{data.profesor}}<span class="fw-bold">
+          Ubicación:</span> {{data.ubicacion}}</li>
+      <li class="list-group-item"><span class="fw-bold">Precio Mensual: </span>{{data.precios}}</li>
+    </ul>
+    <div class="card-body">
+      <button class="btn btn-success">Compra este curso</button>
+    </div>
+    <hr>
+  </div>
+  <app-opiniones></app-opiniones>
+</div>

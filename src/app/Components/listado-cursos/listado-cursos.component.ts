@@ -20,6 +20,9 @@ export class ListadoCursosComponent {
            this.servicio.getCursosByCategoria(this.categoria).subscribe(data => {
               this.listadoCursos = data;
               console.log(this.listadoCursos)
+              this.listadoCursos.forEach( elem => {
+                console.log(elem.id)
+              })
             })
       })
 

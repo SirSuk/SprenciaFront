@@ -1,18 +1,19 @@
-<div class="container mt-5 d-flex flex-wrap gap-2 p-5 mb-5 bg-info">
+<div class="container d-flex justify-content-center flex-wrap gap-2 p-4 pb-5 bg-secondary">
   <div class="container ">
     <div class="cajaboton d-flex justify-content-end ">
-      <button class="btn btn-primary boton mb-5" [routerLink]="['/categorias']">ATRAS</button>
+      <button class="btn btn-danger boton mb-5" [routerLink]="['/categorias']">ATRAS</button>
     </div>
   </div>
-  <div class="cardd card" style="width: 12rem;" *ngFor="let empresa of empresas">
+  <div class="cardd card text-center" style="width: 16rem;" *ngFor="let empresa of empresas">
     <img [src]="empresa.logo" class="card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card-body ">
       <h2>{{empresa.name}}</h2>
-      <p class="card-text">{{empresa.website}}
+      <p class="card-text ">{{empresa.website}}
       <p class="card-text">{{empresa.located_in}}
-      <p class="card-text">{{empresa.email}}
-      <p class="card-text fw-bold">{{empresa.phone}}
+
       </p>
+      <button class="btn btn-secondary mb-2">{{empresa.email}}</button>
+      <button class="btn btn-secondary">{{empresa.telefono}}</button>
     </div>
 
   </div>

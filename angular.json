@@ -25,7 +25,7 @@
               "src/assets"
             ],
            "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "bootswatch/dist/sketchy/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"

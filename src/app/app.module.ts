@@ -13,7 +13,14 @@ import { RegisterComponent } from './Components/register/register.component';
 import { WorkwithusComponent } from './Components/workwithus/workwithus.component';
 import { ListadoCursosComponent } from './Components/listado-cursos/listado-cursos.component';
 import { DetalleCursoComponent } from './Components/detalle-curso/detalle-curso.component';
-
+import { OpinionesComponent } from './Components/opiniones/opiniones.component';
+import { HomeComponent } from './Components/home/home.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { EditarComponent } from './Components/editar/editar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AdduserComponent } from './Components/adduser/adduser.component';
+import { EditusersComponent } from './Components/editusers/editusers.component';
+import { AllopinionsComponent } from './Components/allopinions/allopinions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +32,20 @@ import { DetalleCursoComponent } from './Components/detalle-curso/detalle-curso.
     WorkwithusComponent,
     ListadoCursosComponent,
     DetalleCursoComponent,
+    OpinionesComponent,
+    HomeComponent,
+    DashboardComponent,
+    EditarComponent,
+    AdduserComponent,
+    EditusersComponent,
+    AllopinionsComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

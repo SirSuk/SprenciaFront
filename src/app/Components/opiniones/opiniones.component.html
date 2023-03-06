@@ -1,0 +1,13 @@
+<div class="container d-flex gap-4 flex-column mx-5 p-2 justify-content-center " *ngIf="opinion">
+  <div class="card text-center w-50" *ngFor="let op of opinion">
+    <img [src]="op.avatar_url" class="face" alt="">
+    <div class="card-header">Opinion de: {{op.autor}}</div>
+    <div class="card-body bg-info">
+      <h5 class="card-title"><span class="fw-bold">PUNTUACION: </span>{{op.puntuacion}}</h5>
+      <p class="card-text">{{op.opinion}}</p>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+</div>

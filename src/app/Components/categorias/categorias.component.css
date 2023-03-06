@@ -1,28 +1,19 @@
-.h5 {
-  font-size: 2rem;
-  font-family: 'Calibri' !important;
-  letter-spacing: .4rem;
-  width: 60%;
-  text-align: center;
-  font-family: 'Francois One', sans-serif;
-  font-weight: 800;
-}
-
 .main {
-  height: 200px;
-}
-
-p {
-  font-size: 1.1rem;
-  text-align: center;
+  height: 300px;
+  width: 300px;
   margin-bottom: 1rem;
-
-}
-
-.card-txt {
-  color: black !important;
+  margin: 0 auto;
 }
 
 .cardd {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-text {
+  height: 60px;
+}
+
+.newlife {
+  height: 300px;
+  margin-bottom: 1rem;
 }

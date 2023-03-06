@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ActividadesService {
 
-  urlBase = 'http://localhost:3000/'
+  urlBase = 'http://localhost:3000/api/'
 
   constructor(private http: HttpClient) { }
 
@@ -22,8 +22,22 @@ export class ActividadesService {
         return this.http.get<any[]>(this.urlBase + 'empresas')
   }
 
+  getAllCursos() {
+     return this.http.get<any[]>(this.urlBase + 'cursos')
+  }
   getCursosByCategoria(idCategoria:number){
-    return this.http.get<any[]>(this.urlBase + 'categorias/cursos/' +idCategoria)
+    return this.http.get<any[]>(this.urlBase + 'cursos/categoria/' +idCategoria)
+  }
+  getDetalleCurso(idCurso:number){
+    return this.http.get<any[]>(this.urlBase + 'cursos/curso/' +idCurso)
+  }
+
+   getOpiniones(idCurso:number){
+    return this.http.get<any[]>(this.urlBase + 'opiniones/opinion/curso/' +idCurso)
+  }
+
+  getAllOpinions(){
+    return this.http.get<any[]>(this.urlBase + 'opiniones')
   }
 
 }

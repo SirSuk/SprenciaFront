@@ -14,7 +14,6 @@ export class CategoriasComponent {
   ngOnInit():void {
     this.servicio.getCategorias().subscribe(data => {
       this.categorias = data;
-      console.log(this.categorias)
     })
   }
 }
