@@ -6,3 +6,17 @@ img {
 li {
   font-size: .9rem;
 }
+
+.i {
+  position: absolute !important;
+  color: white;
+}
+
+.carro {
+  position: absolute;
+  right: 8%;
+  top: 20%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

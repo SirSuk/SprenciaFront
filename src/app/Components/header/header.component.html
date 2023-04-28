@@ -1,6 +1,30 @@
 <nav class="navbar navbar-dark bg-dark mb-4">
   <div class="container-fluid">
     <img class=" m-3 p-1 " src="../../assets/imgs/logo.png" alt="logo sprencia" [routerLink]="['/home']" role="button">
+
+    <nav>
+      <ul class="navbar-nav flex flex-row gap-5">
+        <li class="nav-item ">
+          <a class="nav-link active" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/categorias']">Categorias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/allopinions']">Opiniones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/empresas']">Partners</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-info" [routerLink]="['/workwithus']">Work with us</a>
+        </li>
+        <img class="carro" src="../../../assets/imgs/carrito-de-compras.png" alt="">
+      </ul>
+
+    </nav>
+
+
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
       aria-controls="offcanvasDarkNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -8,33 +32,20 @@
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
       aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sprencia Main Menu</h5>
         <button type="button" class="btn-close btn-close-danger" data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/home']">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/allopinions']">Opiniones de los clientes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" [routerLink]="['/categorias']">Categorias</a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/login']">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/register']">Register</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/empresas']">Partners</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-secondary" [routerLink]="['/workwithus']">Work with us</a>
-          </li>
+
         </ul>
 
       </div>

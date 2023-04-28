@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class LoginGuard {
   canActivate() : boolean{
-    // const token = localStorage.getItem('token');
-    // return token ? true : false;
-    return true
+    const token = localStorage.getItem('token');
+    return token ? true : false;
+    
   }
 }

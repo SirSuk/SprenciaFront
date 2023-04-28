@@ -18,9 +18,11 @@ import { HomeComponent } from './Components/home/home.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { EditarComponent } from './Components/editar/editar.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AdduserComponent } from './Components/adduser/adduser.component';
 import { EditusersComponent } from './Components/editusers/editusers.component';
 import { AllopinionsComponent } from './Components/allopinions/allopinions.component';
+import { ProfesoresComponent } from './Components/profesores/profesores.component';
+import { AddcursoComponent } from './Components/addcurso/addcurso.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,10 +38,11 @@ import { AllopinionsComponent } from './Components/allopinions/allopinions.compo
     HomeComponent,
     DashboardComponent,
     EditarComponent,
-    AdduserComponent,
     EditusersComponent,
     AllopinionsComponent,
-   
+    ProfesoresComponent,
+    AddcursoComponent,
+    
   ],
   imports: [
     BrowserModule,

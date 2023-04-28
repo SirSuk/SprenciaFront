@@ -13,6 +13,7 @@ import { LoginGuard } from './guards/login.guard';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { EditarComponent } from './Components/editar/editar.component';
 import { AllopinionsComponent } from './Components/allopinions/allopinions.component';
+import { AddcursoComponent } from './Components/addcurso/addcurso.component';
 
 
 const routes: Routes = [
@@ -21,14 +22,17 @@ const routes: Routes = [
    {path: 'categorias', component: CategoriasComponent},
    {path: 'cursos/categoria/:id', component: ListadoCursosComponent },
    {path: 'cursos/curso/:id', component: DetalleCursoComponent , children: [
-    {path: 'opiniones', component: OpinionesComponent}]},
+      {path: 'opiniones', component: OpinionesComponent}]},
    {path: 'empresas', component: EmpresasComponent},
    {path: 'login', component: LoginComponent},
    {path: 'register', component: RegisterComponent},
-   {path: 'dashboard', component: DashboardComponent, canActivate: [LoginGuard]},
-   {path: 'editar', component: EditarComponent,  canActivate: [LoginGuard]},
+   {path: 'dashboard', component: DashboardComponent, canActivate: [LoginGuard], children: [
+      {path: 'addcurso', component: AddcursoComponent},
+      {path: 'editar', component: EditarComponent, } ]}
+  ,
    {path: 'workwithus', component: WorkwithusComponent},
    {path: 'allopinions', component: AllopinionsComponent}
+ 
 ];
 
 @NgModule({

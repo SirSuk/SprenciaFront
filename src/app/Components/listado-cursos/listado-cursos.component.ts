@@ -21,7 +21,7 @@ export class ListadoCursosComponent {
               this.listadoCursos = data;
               console.log(this.listadoCursos)
               this.listadoCursos.forEach( elem => {
-                console.log(elem.id)
+                console.log(elem)
               })
             })
       })

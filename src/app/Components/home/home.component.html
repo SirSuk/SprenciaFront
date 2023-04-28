@@ -1,11 +1,11 @@
 <div class="text-center mb-4">
   <h1 class="fw-bold">Descubre todos nuestros cursos</h1>
-  <h4>Aprende la tecnología o profesión que siempre has soñado!</h4>
+  <h4 class="my-3">Aprende la tecnología o profesión que siempre has soñado!</h4>
 </div>
-<div class="container d-flex flex-wrap gap-3 justify-content-center mt-2 ">
+<div class="container d-flex flex-wrap gap-4 justify-content-center mt-2 ">
 
-  <div class="card text-center" style="width: 12rem;" *ngFor="let curso of listadoCursos">
-    <img [src]=curso.img_url class="img card-img-top" alt="...">
+  <div class="card text-center" style="width: 14rem;" *ngFor="let curso of listadoCursos">
+    <img [src]=curso.img_url class="imagen img card-img-top" alt="{{curso.nombre}}">
     <div class="card-body">
       <h5 class="card-title fw-bold">{{curso.nombre}}</h5>
       <p class="card-text">{{curso.descripcion}}

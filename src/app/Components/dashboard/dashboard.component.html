@@ -9,8 +9,12 @@
         quasi quis harum doloribus. Esse eius unde debitis asperiores natus culpa. Beatae, est perferendis.
       </p>
     </div>
-    <button [routerLink]="['/addusers']" type="submit" class="btn btn-primary mb-2">Añadir Usuarios</button>
-    <button [routerLink]="['/editusers']" type="submit" class="btn btn-primary">Editar Usuarios</button>
+    <router-outlet>
+      <button [routerLink]="['/dashboard/addcurso']" type="submit" class="btn btn-primary mb-2">Añadir Curso</button>
+      <button [routerLink]="['/dashboard/editar']" type="submit" class="btn btn-primary">Editar Curso existente</button>
+
+    </router-outlet>
+
   </div>
 
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ActividadesService } from 'src/app/services/actividades.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ActividadesService } from 'src/app/services/actividades.service';
 })
 export class HomeComponent {
  listadoCursos!: any[]
-
+ url!: string
   constructor(private servicio: ActividadesService){}
 
   ngOnInit():void {

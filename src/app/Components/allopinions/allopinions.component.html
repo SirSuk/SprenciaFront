@@ -1,17 +1,25 @@
 <div class="texto text-center my-5 fw-bold">
-  <h2>Lo que dicen nuestros clientes</h2>
+  <h1>Lo que dicen nuestros clientes</h1>
+</div>
+<div class="cajaboton">
+  <button class="btn btn-danger boton" [routerLink]="['/categorias']">ATRAS</button>
 </div>
 
 
 <div class="container d-flex flex-wrap gap-3 justify-content-center">
+
   <div class="card text-center bg-info" style="width: 14rem;" *ngFor="let opinion of opiniones">
-    <div class="card-body">
+
+    <div class="card-body d-flex flex-column align-items-center justify-content-space-between">
       <img class="img mb-4" [src]="opinion.avatar_url" alt="">
       <h5 class="card-title">{{opinion.autor}}</h5>
 
       <p class="card-text">{{opinion.opinion}}
       </p>
-      <p class="fw-bold">Nota: {{opinion.puntuacion}}</p>
+      <div class="container d-flex justify-content-center gap-2 align-items-center my-auto">
+        <i class="fa-regular fa-note-sticky"></i>
+        <p class="fs-4 fw-bold m-0">Nota: {{opinion.puntuacion}}</p>
+      </div>
 
 
     </div>

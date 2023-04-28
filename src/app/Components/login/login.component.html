@@ -3,12 +3,14 @@
     <h2>Login</h2>
     <div class="mb-3 ">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-        formControlName="email">
+      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+      <input type="password" class="form-control" formControlName="password">
+      <div class="form-text text-danger"
+        *ngIf="form.get('password')?.hasError('required') && form.get('email')?.touched">
+        pass obligatorio </div>
     </div>
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -17,11 +19,13 @@
 
     <!-- <p class="mt-1 text-danger fw-bold">User o contraseña Incorrectos</p> -->
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Submit</button>
     <a class="text-warning mx-4" [routerLink]="['/register']">No tienes cuenta? Registrate Aqui!</a>
     <div *ngIf="alerta" class="mt-5 alert alert-danger alert-dismissible fade show" role="alert">
       <strong>OOoops...</strong> Usuario o contraseña incorrectos
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+    <div class="form-text text-danger" *ngIf="mensajeError !== '' ">
+      email obligatorio </div>
   </form>
 </div>

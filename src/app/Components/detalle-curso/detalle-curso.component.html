@@ -3,8 +3,7 @@
   <div class="card text-center" style="width: 36rem;" *ngFor="let data of detalleCurso">
     <button class="btn btn-danger boton" [routerLink]="['/cursos/categoria/', data.categoria_id]">ATRAS</button>
 
-    <div class="cajaboton">
-    </div>
+
     <img [src]="data.img_url" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title fw-bold">{{data.nombre}}</h5>
